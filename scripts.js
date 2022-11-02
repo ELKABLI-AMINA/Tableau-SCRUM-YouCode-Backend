@@ -1,21 +1,18 @@
-showform(id){
-    let title = document.getElementById(id+"t");
-    let type = document.getElementById(id+"ty");
-    let priority = document.getElementById(id+"p");
-    let status = document.getElementById(id+"s");
-    let description = document.getElementById(id+"de");
-    let date = document.getElementById(id+"d");
-    task_id.value = id;
-    task_title.value = title.getAttribute("date");
-    task_date.value = date.getAttribute("date");
-    task_description.value = description.getAttribute("date");
+showform(id,title,status,date,description,priority,type){
 
-    if(type.getAttribute("data")=="Bug"){
-        task_type_bug.checked = true;
+    task_id.value = id;
+    title_task.value = title;
+    if(type=='Feature'){
+        task_type_Feature.checked=true; 
+
+    }else{
+        task_type_Bug.checked=true;
     }
-    else{
-        task_type_feature.checked = true;
-    }
-    task_priority.value = priority.getAttribute("data");
+    task_status.value=status;
+    task_description.value=description;
+    task_date.value =date;
+   
+
+    
     show_modal.click();
 }

@@ -58,7 +58,7 @@
                
                 
                 echo'<script>to_do_tasks_count.innerHTML='.$To_Do_compteur.' </script>';
-                echo '<button class="w-100 bg-white border-0 border-bottom text-start p-10px d-flex" id="'.$row['id'].'" onclick="showform(this.id)">
+                echo '<button class="w-100 bg-white border-0 border-bottom text-start p-10px d-flex"  onclick="showform('.$id.',`'.$title.'`,`'.$status.'`,`'.$date.'`,`'.$description.'`,`'.$priority.'`,`'$type'`)">
                 <div class="  col-1 fs-3 text-success">
                     <i class="fa-regular fa-circle-question"></i> 
                 </div>
@@ -79,7 +79,7 @@
                 $In_Progress_compteur++;
                 echo'<script>in_progress_tasks_count.innerHTML='.$In_Progress_compteur.' </script>';
              
-                echo '<button class="w-100 bg-white border-0 border-bottom text-start p-10px d-flex" id="'.$row['id'].'" onclick="showform(this.id)">
+                echo '<button class="w-100 bg-white border-0 border-bottom text-start p-10px d-flex"  onclick="showform('.$id.',`'.$title.'`,`'.$status.'`,`'.$date.'`,`'.$description.'`,`'.$priority.'`,`'$type'`)">>
                 <div class="  col-1 fs-3 text-success">
                 <i class="fa-solid fa-circle-notch"></i> 
                 </div>
@@ -100,7 +100,7 @@
                 $Done_compteur++;
                 echo'<script>done_tasks_count.innerHTML="'.$Done_compteur.'" </script>';
                 
-                echo '<button class="w-100 bg-white border-0 border-bottom text-start p-10px d-flex" id="'.$row['id'].'" onclick="showform(this.id)">
+                echo '<button class="w-100 bg-white border-0 border-bottom text-start p-10px d-flex"  onclick="showform('.$id.',`'.$title.'`,`'.$status.'`,`'.$date.'`,`'.$description.'`,`'.$priority.'`,`'$type'`)">">
                 <div class="  col-1 fs-3 text-success">
                 <i class="fa-regular fa-circle-check"></i>  
                 </div>
