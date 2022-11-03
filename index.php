@@ -353,7 +353,7 @@
 										<label class="form-check-label" for="task-type-feature">Feature</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="task_type" type="radio" value="Bug" id="task_type_bug"/>
+										<input class="form-check-input" name="task_type" type="radio" value="Bug" id="task_type_bug" required/>
 										<label class="form-check-label" for="task-type-bug">Bug</label>
 									</div>
 								</div>
@@ -361,7 +361,7 @@
 							</div>
 							<div class="mb-3">
 								<label class="form-label">Priority</label>
-								<select class="form-select" id="task_priority" name="priority">
+								<select class="form-select" id="task_priority" name="priority" required>
 									<option value="">Please select</option>
 									<option value="Low">Low</option>
 									<option value="Medium">Medium</option>
@@ -371,7 +371,7 @@
 							</div>
 							<div class="mb-3">
 								<label class="form-label">Status</label>
-								<select class="form-select" id="task_status" name="status">
+								<select class="form-select" id="task_status" name="status"required>
 									<option value="">Please select</option>
 									<option value="To Do">To Do</option>
 									<option value="In Progress">In Progress</option>

@@ -28,7 +28,7 @@
          $title=$row["title"];
          $date=$row["task_datetime"];
          $description=$row["description"];
-            if( $row["type_id"]=="1"){
+            if( $row["type_id"]==1){
                 $type='Feature';
             }else{
                 $type='Bug';
@@ -58,7 +58,7 @@
                
                 
                 echo'<script>to_do_tasks_count.innerHTML='.$To_Do_compteur.' </script>';
-                echo '<button class="w-100 bg-white border-0 border-bottom text-start p-10px d-flex"  onclick="showform('.$id.',`'.$title.'`,`'.$status.'`,`'.$date.'`,`'.$description.'`,`'.$priority.'`,`'$type'`)">
+                echo '<button class="w-100 bg-white border-0 border-bottom text-start p-10px d-flex"  onclick="showform('.$row['id'].',`'.$title.'`,`'.$status.'`,`'.$date.'`,`'.$description.'`,`'.$priority.'`,`'.$type.'`)">
                 <div class="  col-1 fs-3 text-success">
                     <i class="fa-regular fa-circle-question"></i> 
                 </div>
@@ -79,7 +79,7 @@
                 $In_Progress_compteur++;
                 echo'<script>in_progress_tasks_count.innerHTML='.$In_Progress_compteur.' </script>';
              
-                echo '<button class="w-100 bg-white border-0 border-bottom text-start p-10px d-flex"  onclick="showform('.$id.',`'.$title.'`,`'.$status.'`,`'.$date.'`,`'.$description.'`,`'.$priority.'`,`'$type'`)">>
+                echo '<button class="w-100 bg-white border-0 border-bottom text-start p-10px d-flex"  onclick="showform('.$row['id'].',`'.$title.'`,`'.$status.'`,`'.$date.'`,`'.$description.'`,`'.$priority.'`,`'.$type.'`)">
                 <div class="  col-1 fs-3 text-success">
                 <i class="fa-solid fa-circle-notch"></i> 
                 </div>
@@ -100,13 +100,13 @@
                 $Done_compteur++;
                 echo'<script>done_tasks_count.innerHTML="'.$Done_compteur.'" </script>';
                 
-                echo '<button class="w-100 bg-white border-0 border-bottom text-start p-10px d-flex"  onclick="showform('.$id.',`'.$title.'`,`'.$status.'`,`'.$date.'`,`'.$description.'`,`'.$priority.'`,`'$type'`)">">
+                echo '<button class="w-100 bg-white border-0 border-bottom text-start p-10px d-flex" onclick="showform('.$row['id'].',`'.$title.'`,`'.$status.'`,`'.$date.'`,`'.$description.'`,`'.$priority.'`,`'.$type.'`)">
                 <div class="  col-1 fs-3 text-success">
                 <i class="fa-regular fa-circle-check"></i>  
                 </div>
                 <div class="">
                     <div value="'.$title.'" id="'.$row['id']."ts".'" class="h5">'.$title.'</div>
-                    <input type="hidden" id="'.$row['id']."s".'" data="'.$status.'">
+                    <input type="hidden" id="'.$row['id']."s".'" data="'.$status.'"> 
                     <div class="">
                         <div class=" text-gray" data="'.$date.'" id="'.$row['id']."d".'">#1 created in '.$date.'</div>
                         <div class=" text-black" data="'.$description.'" id="'.$row['id']."di".'" title="">'.$description.'</div>
